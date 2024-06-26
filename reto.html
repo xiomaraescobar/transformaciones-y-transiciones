@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+   
+       body {
+        margin: 0;
+        padding: 0;
+        background-color: grey;
+      }
+
+      html {
+        font-size: 62.5%;
+        font-family: "Roboto", sans-serif;
+      }
+
+     /* Nav/Header */
+
+      .container{
+        display: flex;
+        width: 100%;
+        height: 52px;
+        background-color: #1a0909;
+        box-shadow: 0 2px 4px 0 rgb(0 0 0 / 25%)
+      }
+    /* Containers */
+
+       .container-scale, .container-translate, .skew-container, .rotate-container, .origin-container, .property-duration-container, .backface-container{
+          width: 600px;
+          height: 250px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-wrap: wrap;
+          margin: 0 auto;
+          margin-top: 100px;
+          border-bottom: 1px solid #0093E9;
+        }
+
+       .container-scale{
+         margin-top: 0;
+         padding-bottom: 20px;
+        }
+
+        .container-translate{
+          padding-bottom: 20px;
+        }
+
+       .origin-container{
+          align-items: flex-start;
+          align-content: flex-start;
+          height: 300px;
+          padding-bottom: 50px;
+        }
+
+        .skew-container{
+          justify-content: space-evenly;
+        }
+
+        .property-duration-container{
+            justify-content: center;
+        }
+
+        .backface-container{
+            height: 650px;
+            justify-content: center;
+        }
+
+        .container-scale h3, .container-translate h3, .skew-container h3, .rotate-container h3, .origin-container h3, .property-duration-container h3, .backface-container h3{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin: 0;
+            color: #fff;
+            font-size: 3rem;
+        }
+
+        .origin-container h3{
+            margin: 30px;
+        }
+
+      /*  fin Containers */
+
+      /* Scale */
+
+        .scale, .scaleX, .scaleY, .circle, .circleX, .circleY, .skew-x, .skew-y, .rotate, .rotate-x, .rotate-y, .origin, .origin-x, .origin-y{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-image: linear-gradient(160deg, #e900a3 0%, #b980d0 100%);
+            transition:  all .4s;
+            position: relative;
+        }
+
+        .origin, .origin-x, .origin-y{
+            transition:  all 3s;
+            transform-origin: left bottom;
+        }
+
+        .rotate, .rotate-x, .rotate-y{
+            transition:  all 1s;
+            border-radius: 0%;
+        }
+
+        .scale:hover{
+            transform: scale(1.5);
+        }
+
+        .scaleX:hover{
+            transform: scaleX(1.5);
+        }
+
+        .scaleY:hover{
+            transform: scaleY(1.5);
+        }
+
+      .scale h6,.scaleX h6, .scaleY h6, .translate h6,.translateX h6, .translateY h6, .skew-x h6, .skew-y h6, .rotate h6, .rotate-x h6, .rotate-y h6, .origin-y h6, .origin-x h6, .origin h6{
+          position: absolute;
+          color: rgb(211, 211, 211);
+          font-size: 1.4rem;
+      }
+
+     /* fin Scale */
+
+     /*  inicio Translate */
+
+        .translate, .translateX, .translateY{
+            width: 100px;
+            height: 100px;
+            background: rgb(211, 211, 211);
+            border-radius: 50%;
+        }
+
+        .circle:hover{
+            transform: translate(20px, 20px);
+        }
+
+        .circleX:hover{
+            transform: translateX(20px);
+        }
+
+        .circleY:hover{
+            transform: translateY(20px);
+        }
+
+     /* fin translate */
+
+     /* Skew */
+
+        .skew-y:hover{
+            transform: skewY(20deg);
+            transition: all .4s;
+        }
+
+        .skew-x:hover{
+            transform: skewX(20deg);
+            transition: all .4s;
+        }
+
+       /* fin Skew */
+
+       /* Rotate */
+
+        .rotate, .rotate-x, .rotate-y{
+            margin: 70px auto;
+
+            width: 100px;
+            height: 100px;
+        }
+
+        .rotate:hover{
+            transform: rotate(360deg);
+            transition: all 3s;
+        }
+
+        .rotate-x:hover{
+            transform: rotateX(360deg);
+            transition: all 3s;
+        }
+
+        .rotate-y:hover{
+            transform: rotateY(360deg);
+            transition: all 3s;
+        }
+
+      /* fin Rotate */
+      /* Property Duration */
+
+        .box-container{
+            width: 400px;
+            height: 100px;
+            background-color: rgb(213, 250, 255);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .box-container:hover .box{
+            transform: scale(1.2);
+        }
+
+        .box{
+            width: 100px;
+            height: 100px;
+        }
+
+        .box1{
+            transition: transform 1s;
+            background: rgb(77, 161, 17);
+        }
+
+        .box2{
+             transition: transform 1.5s;
+             background: rgb(109, 191, 37);
+          }
+
+        .box3{
+             transition: transform 2s;
+             background: rgb(22, 169, 29);
+          }
+
+        /* fin Property Duration */
+
+        /* Backface-visibility */
+
+        .card-container{
+             width: 250px;
+             height: 350px;
+          }
+
+        .card{
+              width: 100%;
+              height: 100%;
+              transform-style: preserve-3d;
+              position: relative;
+              transition: all 1s linear;
+         }
+
+        .card:hover{
+            transform: rotateY(180deg);
+        }
+
+        .front, 
+        .back{
+            position: absolute;
+            border-radius: 20px;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 45px;
+            font-family: 'Courier New', Courier, monospace;
+        } 
+
+        .front{
+            background-image: linear-gradient(62deg, #1d80c2 0%, #5833e0 100%);
+        }
+
+        .back{
+            background-image: linear-gradient(45deg, #5b9c23 0%, #FFFB7D 100%);
+            transform: rotateY(180deg);
+          }
+       /* fin Backface-visibility */
+    </style>
+</head>
+
+<body>  
+        <!-- Scale -->
+      <section class="container-scale">
+          <h3>Scale</h3>
+            <div class="scale">
+              <h6>Scale</h6>
+            </div>
+            <div class="scaleX">
+              <h6>Scale X</h6>
+            </div>
+            <div class="scaleY">
+              <h6>Scale Y</h6>
+            </div>
+      </section>
+            <!-- fin Scale -->
+            <!-- Translate -->
+        <section class="container-translate">
+            <h3>Translate</h3>
+               <div class="translate">
+                  <div class="circle">
+                    <h6>Translate</h6>
+                  </div>
+               </div>
+               <div class="translateX">
+                  <div class="circleX">
+                     <h6>Translate X</h6>
+                  </div>
+               </div>
+               <div>
+                  <div class="translateY">
+                    <div class="circleY">
+                        <h6>Translate Y</h6>
+                    </div>
+                  </div>
+                </div>
+         </section>
+              <!-- fin translate -->
+              <!-- Skew -->
+         <section class="skew-container">
+            <h3>Skew</h3>
+              <div class="skew-x">
+                 <h6>Skew X</h6>
+              </div>
+              <div class="skew-y">
+                <h6>Skew Y</h6>
+              </div>
+          </section>
+             <!-- End Skew -->
+             <!-- Rotate -->
+          <section class="rotate-container">
+             <h3>Rotate</h3>
+               <div class="rotate">
+                  <h6>Rotate</h6>
+               </div>
+               <div class="rotate-x">
+                  <h6>Rotate X</h6>
+               </div>
+               <div class="rotate-y">
+                  <h6>Rotate Y</h6>
+               </div>
+          </section>
+             <!-- End Rotate -->
+             <!-- Origin -->
+          <section class="origin-container">
+              <h3>Origin</h3>
+              <div class="origin">
+                 <h6>Rotate</h6>
+              </div>
+              <div class="origin-x">
+                 <h6>Rotate X</h6>
+              </div>
+              <div class="origin-y">
+                 <h6>Rotate Y</h6>
+              </div>                
+          </section>
+             <!-- End Origin -->
+             <!-- Duration -->
+          <section class="property-duration-container">
+              <h3>Property Duration</h3>
+                <div class="box-container">
+                   <div class="box box1"></div>
+                   <div class="box box2"></div>
+                   <div class="box box3"></div>   
+                </div>    
+          </section>
+             <!-- End Duration -->
+             <!-- Backface-visibility -->
+           <section class="backface-container">
+              <h3>Backface-visibility</h3>
+                <div class="card-container">
+                  <div class="card">
+                    <div class="front">Front</div>
+                    <div class="back">Back</div>
+                  </div>
+                </div>
+            </section>
+ </body>
+</html>
